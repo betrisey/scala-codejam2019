@@ -50,5 +50,5 @@ A*x=b
 x=(ring1, ring2, ..., ring6)
 b=(day1, day2, ..., day6)
 
-b=A^1*b
+b=A^(-1)*b
 */
