@@ -24,18 +24,10 @@ object Solution {
         }
       }
 
-      var max = -1
-      var maxPos = (0, 0)
-      for (x <- 0 to q;
-           y <- 0 to q) {
-        val sum = cols(x) + rows(y)
-        if (sum > max || (sum == max && ((x < maxPos._1) || (x == maxPos._1 && y < maxPos._2)))) {
-          max = sum
-          maxPos = (x, y)
-        }
-      }
+      val x = cols.zipWithIndex.maxBy(_._1)._2
+      val y = rows.zipWithIndex.maxBy(_._1)._2
 
-      println(s"Case #$i: ${maxPos._1} ${maxPos._2}")
+      println(s"Case #$i: $x $y")
     }
   }
 
